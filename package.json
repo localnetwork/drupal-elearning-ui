@@ -4,20 +4,29 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "predev": "node lib/preBuildScripts/preBuildDev.js",
+    "prebuild": "node lib/preBuildScripts/preBuildDev.js",
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "axios": "^1.11.0",
+    "dotenv": "^17.2.1",
+    "fs": "^0.0.1-security",
+    "https": "^1.0.0",
+    "jsona": "^1.12.1",
+    "next": "15.5.2",
+    "nookies": "^2.5.2",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "next": "15.5.2"
+    "swr": "^2.3.6"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.5.2",
-    "@eslint/eslintrc": "^3"
+    "tailwindcss": "^4"
   }
 }
